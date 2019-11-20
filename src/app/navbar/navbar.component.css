@@ -1,0 +1,15 @@
+.navbar-brand img {
+  width: 50px;
+}
+
+.navbar-brand h1 {
+  display: inline-block;
+}
+
+.badge {
+  margin-left: 5px;
+}
+
+.nav-link {
+  color: white !important;
+}

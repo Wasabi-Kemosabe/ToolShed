@@ -1,0 +1,11 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 50px;
+  background-color: #28a745;
+}
+
+.footer-copyright {
+  color: white;
+}
