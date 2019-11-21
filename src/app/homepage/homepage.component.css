@@ -1,3 +1,45 @@
+/* ----------------------------------- */
+/* Google Icons */
+/* ----------------------------------- */
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* ----------------------------------- */
+/* Body Settings */
+/* ----------------------------------- */
+
 .media {
   margin-bottom: 15px;
   width: 300px;
@@ -71,4 +113,35 @@
 
 .tool-inventory .bottom-menu {
   background-image: url(../../assets/img/set_of_tools.jpg);
+}
+
+/* ----------------------------------- */
+/* Modal Settings */
+/* ----------------------------------- */
+
+.user-info li {
+  list-style-type: none;
+}
+
+.tool-pic-modal {
+  width: 45px;
+  height: auto;
+}
+
+.modal-header {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.modal-footer {
+  border-top: 1px solid black;
+}
+
+.modal-header,
+.modal-footer {
+  background-color: #28a745;
+}
+
+.modal-body {
+  background-color: rgb(158, 158, 158);
 }
