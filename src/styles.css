@@ -15,6 +15,11 @@ body {
   margin-bottom: 60px;
 }
 
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
 .col-5,
 .col-8 {
   background-color: #28a745;

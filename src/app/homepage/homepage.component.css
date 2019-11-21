@@ -1,0 +1,74 @@
+.media {
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+.media img {
+  width: 64px;
+  height: auto;
+}
+
+.tool-info {
+  text-transform: none;
+}
+
+.tool-checkout {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 50px;
+  height: 280px;
+}
+
+.tool-checkout h4 {
+  margin-bottom: 10px;
+}
+
+.tool-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.tool-scroll::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+.tool-scroll::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.tool-scroll::-webkit-scrollbar-track {
+  box-shadow: rgb(0, 0, 0);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.search-bar,
+.tool-inventory {
+  border: 2px solid black;
+  border-radius: 50px;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 0 !important;
+}
+
+.search-bar .row,
+.tool-inventory .row {
+  border-radius: 50px;
+  margin: 0;
+}
+
+.bottom-menu {
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px 0 0 50px;
+}
+
+.search-bar .bottom-menu {
+  background-image: url(../../assets/img/map.jpg);
+}
+
+.tool-inventory .bottom-menu {
+  background-image: url(../../assets/img/set_of_tools.jpg);
+}
