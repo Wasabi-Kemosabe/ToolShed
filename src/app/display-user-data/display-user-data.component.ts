@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserInfoModel } from '../models/UserInfoModel'
+import { UserInfoModel } from '../models/UserInfoModel';
+import { HttpClient } from "@angular/common/http";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'display-user-data',
@@ -18,9 +20,17 @@ export class DisplayUserDataComponent implements OnInit {
     password: "Idasn2x2#"
   });
 
-  constructor() { }
+  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+
+  private subscriber: any;
 
   ngOnInit() {
+    this.subscriber = this.route.params.subscribe(params => {
+      console.log(params.uid);
+      this.http.get('/api/v1/customers/' + params.uid).subscribe((data: any) => {
+        this.user = new UserInfoModel(data.customer);
+      });
+    });
   }
 
 }

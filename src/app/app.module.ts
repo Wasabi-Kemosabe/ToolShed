@@ -11,6 +11,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { MessagesComponent } from './messages/messages.component';
 import { InputUserDataFormComponent } from './input-user-data-form/input-user-data-form.component';
 import { DisplayUserDataComponent } from './display-user-data/display-user-data.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DisplayUserDataComponent } from './display-user-data/display-user-data.
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule

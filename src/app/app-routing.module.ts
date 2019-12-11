@@ -9,6 +9,7 @@ import { DisplayUserDataComponent } from './display-user-data/display-user-data.
 const routes: Routes = [
   { path: '', component: InputUserDataFormComponent },
   { path: 'userinfo', component: DisplayUserDataComponent },
+  { path: 'user/:uid', component: DisplayUserDataComponent },
   { path: 'homepage', component: HomepageComponent },
   { path: 'messages', component: MessagesComponent }
 ];
