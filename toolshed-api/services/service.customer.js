@@ -3,7 +3,7 @@ let Validator = require('fastest-validator');
 
 
 let customers = {};
-let counter = 0;
+let counter = 1;
 
 /* create an instance of the validator */
 let customerValidator = new Validator();

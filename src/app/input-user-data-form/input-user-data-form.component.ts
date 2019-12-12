@@ -63,11 +63,9 @@ export class InputUserDataFormComponent implements OnInit {
     } else {
       let data: any = Object.assign({ guid: this.guid }, this.userForm.value);
 
-      console.log(data);
-
       this.http.post('/api/v1/customers', data).subscribe((data: any) => {
 
-        let path = '/user/' + data.customer.customerUid;
+        let path = '/user/' + data.customer.uid;
 
         this.router.navigate([path]);
       },
