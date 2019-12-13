@@ -4,9 +4,7 @@ var CustomerService = require('../services/service.customer');
 
 /* GET customer listing. */
 router.get('/', async function (req, res, next) {
-  res.json({
-    error: "Invalid Customer UID."
-  });
+  return res.json(await CustomerService.retrieveAll());
 });
 
 /* adds a new customer to the list */

@@ -79,6 +79,10 @@ class CustomerService {
     return customer;
   }
 
+  static retrieveAll() {
+    return customers;
+  }
+
   static retrieve(uid) {
     if (customers[uid] != null) {
       return customers[uid];
