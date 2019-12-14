@@ -2,9 +2,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
 var generate_uid = require('./routes/generate_uid');
 var customer = require('./routes/customer');
+var storage = require('node-persist');
 
 let reporter = function (type, ...rest) {
   // remote reporter logic goes here
@@ -32,9 +32,11 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser())
 
-app.use(function (req, res, next) {
+app.use(async function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  await storage.init();
+  global.storageObj = storage;
   next();
 });
 

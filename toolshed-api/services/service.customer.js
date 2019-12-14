@@ -1,7 +1,6 @@
 const CustomerModel = require("../models/model.customer");
 let Validator = require('fastest-validator');
 
-
 let customers = {};
 let counter = 1;
 
@@ -76,19 +75,27 @@ class CustomerService {
 
     customers[customer.uid] = customer;
 
+    storageObj.setItem('data', customers);
+
     return customer;
   }
 
   static retrieveAll() {
-    return customers;
+    return storageObj.getItem('data');
+    // return customers;
   }
 
   static retrieve(uid) {
-    if (customers[uid] != null) {
-      return customers[uid];
-    } else {
-      throw new Error('Unable to retrieve a customer by (uid:' + uid + ')');
-    }
+    // WARNING
+    // storageObj.getItem('data') is a Promise so we have to wait for the Promise to fulfill.  We do that by Promise chain using .then method
+    // WARNING
+    return storageObj.getItem('data').then(function (list) {
+      if (list != null) {
+        return list[uid];
+      } else {
+        throw new Error('Unable to retrieve a customer by (uid:' + uid + ')');
+      }
+    });
   }
 
   static update(uid, data) {
