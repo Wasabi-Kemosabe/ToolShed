@@ -75,6 +75,10 @@ class CustomerService {
 
     customers[customer.uid] = customer;
 
+    customer.guid = data.guid;
+
+    console.log(customer);
+
     storageObj.setItem('data', customers);
 
     return customer;
