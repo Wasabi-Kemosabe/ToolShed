@@ -12,6 +12,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { InputUserDataFormComponent } from './input-user-data-form/input-user-data-form.component';
 import { DisplayUserDataComponent } from './display-user-data/display-user-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GoogleMapSearchComponent } from './google-map-search/google-map-search.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomepageComponent,
     MessagesComponent,
     InputUserDataFormComponent,
-    DisplayUserDataComponent
+    DisplayUserDataComponent,
+    GoogleMapSearchComponent
   ],
   imports: [
     BrowserModule,
