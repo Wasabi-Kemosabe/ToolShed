@@ -2,3 +2,7 @@
   width: 45px;
   height: auto;
 }
+
+.checked {
+  color: orange;
+}
