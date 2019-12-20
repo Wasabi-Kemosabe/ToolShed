@@ -1,1 +1,38 @@
-{"key":"data","value":{"c1":{"uid":"c1","first_name":"John","last_name":"Doe","email":"example2@gmail.com","zipcode":"54321","password":"Qwerty12","guid":"dfufsOa6TRfGiNJ8koUYMB5k"},"c2":{"uid":"c2","first_name":"Jane","last_name":"Doe","email":"example@gmail.com","zipcode":"22222","password":"AZsxDCfv12","guid":"hRj2Xk3Tq6PY0N5bGCUi4fW9"},"c3":{"uid":"c3","first_name":"skrjwer","last_name":"werte","email":"xcv@dfgdfg.com","zipcode":"23564","password":"Dgrt2334","guid":"6ohiieRZwv54xiCpADL4OqRl"}}}
+{
+  "key":"data",
+  "value":{
+    "c1":{
+      "uid":"c1",
+      "first_name":"John",
+      "last_name":"Doe",
+      "email":"example2@gmail.com",
+      "zipcode":"54321",
+      "password":"Qwerty12",
+      "guid":"dfufsOa6TRfGiNJ8koUYMB5k",
+      "lat":"32.569451",
+      "lng":"-117.120031"
+    },
+    "c2":{
+      "uid":"c2",
+      "first_name":"Jane",
+      "last_name":"Doe",
+      "email":"example@gmail.com",
+      "zipcode":"22222",
+      "password":"AZsxDCfv12",
+      "guid":"hRj2Xk3Tq6PY0N5bGCUi4fW9",
+      "lat":"32.581539",
+      "lng":"-117.129333"
+    },
+    "c3":{
+      "uid":"c3",
+      "first_name":"skrjwer",
+      "last_name":"werte",
+      "email":"xcv@dfgdfg.com",
+      "zipcode":"23564",
+      "password":"Dgrt2334",
+      "guid":"6ohiieRZwv54xiCpADL4OqRl",
+      "lat":"32.580874",
+      "lng":"-117.056530"
+    }
+  }
+}

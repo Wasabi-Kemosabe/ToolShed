@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-google-map-search',
@@ -8,9 +9,14 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 
 export class GoogleMapSearchComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   @ViewChild('mapContainer', {static: false}) gmap: ElementRef;
+
+  private subscriber: any;
+  users: any;
+
+  googleMapSearch: string;
 
   map: google.maps.Map;
   lat = 32.576925;
@@ -19,15 +25,23 @@ export class GoogleMapSearchComponent implements OnInit, AfterViewInit {
   coordinates = new google.maps.LatLng(this.lat, this.lng);
   mapOptions: google.maps.MapOptions = {
     center: this.coordinates,
-    zoom: 8,
+    zoom: 13,
   };
 
-  marker = new google.maps.Marker({
-    position: this.coordinates,
-    map: this.map,
-  });
+  marker: any;
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.subscriber = this.http.get('/api/v1/customers').subscribe((data: any) => {
+      this.users = Object.keys(data).map(i => data[i]);
+      for (let i = 0; i < this.users.length; i++) {
+        const element = this.users[i];
+        this.marker = new google.maps.Marker({
+          position: new google.maps.LatLng(element.lat, element.lng),
+          map: this.map,
+        });
+      }
+    })
+  }
 
   ngAfterViewInit() {
     this.mapInitializer();

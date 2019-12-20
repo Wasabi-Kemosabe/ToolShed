@@ -1,1 +1,14 @@
-<div #mapContainer id="map"></div>
+<div class="row input-group mb-3">
+  <input type="text" class="form-control" id="googleMapSearch" placeholder="999 Arendelle Dr. Imperial Beach, CA 91932" aria-label="Recipient's username" aria-describedby="basic-addon2" name="googleMapSearch">
+  <select class="selectpicker" data-width="fit" id="mileSelect">
+    <option value="10">10 miles</option>
+    <option value="15">15 miles</option>
+    <option value="20">20 miles</option>
+  </select>
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button">Search</button>
+    <button class="btn btn-danger" type="button">Reset</button>
+  </div>
+</div>
+
+<div #mapContainer class="row" id="map"></div>

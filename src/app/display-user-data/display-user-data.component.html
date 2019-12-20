@@ -1,45 +1,85 @@
-<legend>User Information</legend>
-<form>
-  <div class="form-group">
-    <!-- GUD -->
-    <label class="col-xs-6 col-form-label">GUID</label>
-    <div class="col-xs-6">{{user.guid}}</div>
+<div class="row">
+
+  <div class="col">
+    <legend>User Information</legend>
+    <form>
+      <div class="form-group">
+        <!-- GUD -->
+        <label class="col-xs-6 col-form-label">GUID</label>
+        <div class="col-xs-6">{{user.guid}}</div>
+      </div>
+
+      <div class="form-group">
+        <!-- Customer UID -->
+        <label class="col-xs-6 col-form-label">Customer UID</label>
+        <div class="col-xs-6">{{user.uid}}</div>
+      </div>
+
+      <div class="form-group">
+        <!-- First Name -->
+        <label class="col-xs-6 col-form-label">First Name</label>
+        <div class="col-xs-6">{{user.first_name}}</div>
+      </div>
+
+      <div class="form-group">
+        <!-- Last Name -->
+        <label class="col-xs-6 col-form-label">Last Name</label>
+        <div class="col-xs-6">{{user.last_name}}</div>
+      </div>
+
+      <div class="form-group">
+        <!-- E-mail -->
+        <label class="col-xs-6 col-form-label">E-mail</label>
+        <div class="col-xs-6">{{user.email}}</div>
+      </div>
+
+      <div class="form-group">
+        <!-- Zip Code -->
+        <label class="col-xs-6 col-form-label">Zip Code</label>
+        <div class="col-xs-6">{{user.zipcode}}</div>
+      </div>
+
+      <div class="form-group">
+        <!-- Password -->
+        <label class="col-xs-6 col-form-label">Password</label>
+        <div class="col-xs-6">{{user.password}}</div>
+      </div>
+    </form>
   </div>
 
-  <div class="form-group">
-    <!-- Customer UID -->
-    <label class="col-xs-6 col-form-label">Customer UID</label>
-    <div class="col-xs-6">{{user.uid}}</div>
+  <div class="col">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Photo</th>
+          <th scope="col">Description</th>
+          <th scope="col"># of Inv</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">
+            <img class="tool-pic img-thumbnail rounded-circle" src="../../assets/img/hammer.jpg" alt="Tool Pic">
+          </th>
+          <td>Hammer</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <img class="tool-pic img-thumbnail rounded-circle" src="../../assets/img/drill_set.jpg" alt="Tool Pic">
+          </th>
+          <td>Drill Set</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <img class="tool-pic img-thumbnail rounded-circle" src="../../assets/img/wrench_set.jpg" alt="Tool Pic">
+          </th>
+          <td>Wrench Set</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="form-group">
-    <!-- First Name -->
-    <label class="col-xs-6 col-form-label">First Name</label>
-    <div class="col-xs-6">{{user.first_name}}</div>
-  </div>
-
-  <div class="form-group">
-    <!-- Last Name -->
-    <label class="col-xs-6 col-form-label">Last Name</label>
-    <div class="col-xs-6">{{user.last_name}}</div>
-  </div>
-
-  <div class="form-group">
-    <!-- E-mail -->
-    <label class="col-xs-6 col-form-label">E-mail</label>
-    <div class="col-xs-6">{{user.email}}</div>
-  </div>
-
-  <div class="form-group">
-    <!-- Zip Code -->
-    <label class="col-xs-6 col-form-label">Zip Code</label>
-    <div class="col-xs-6">{{user.zipcode}}</div>
-  </div>
-
-  <div class="form-group">
-    <!-- Password -->
-    <label class="col-xs-6 col-form-label">Password</label>
-    <div class="col-xs-6">{{user.password}}</div>
-  </div>
-
-</form>
+</div>
